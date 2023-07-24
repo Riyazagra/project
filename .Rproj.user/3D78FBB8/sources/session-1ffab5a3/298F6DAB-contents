@@ -1,0 +1,37 @@
+dashboardBody(
+  tabItem(
+    tabName = "TABLES",
+    tabsetPanel(
+      tabPanel("TABLES",
+               fluidRow(
+                 column(6,align="right",actionButton("report1","Add to Report"))
+               ),
+               fluidRow(
+                box(title="Diagnosed",solidHeader = TRUE,column(7, dataTableOutput("diag"))),
+                box(title="Body Part",solidHeader = TRUE,column(7, dataTableOutput("body_part")))
+                      ),
+               fluidRow(
+                box(title="Location",solidHeader = TRUE,column(7,dataTableOutput("location"))),
+                box(column(10,selectInput("tabless",label="Select the table",choices = c("Diag","body_part","location")))),
+                box(title= "Download Table",column(10,downloadButton("download")))
+                      )
+              ),
+      tabPanel("PLOTS",
+               tabsetPanel(
+                  tabPanel("Ggplot",
+                           fluidRow(
+                                column(4,selectInput("y","Y-axis",c("count","rate"))),
+                                column(6,align="center",actionButton("report2","Add to Report")),
+                            fluidRow(   
+                          box(width=8,column(4,plotOutput("age_sex")))),
+                  )),
+                    tabPanel("Plotly",
+                            fluidRow(
+                              column(4,selectInput("z","Y-axis",c("count","rate"))),
+                              column(6,align="center",actionButton("report2","Add to Report")),
+                            fluidRow(  
+                              box(width=8,column(4, plotlyOutput("age_sex_plotly",width = "250%",height="20%")))
+                            ))
+                      )
+      )        
+  ))))

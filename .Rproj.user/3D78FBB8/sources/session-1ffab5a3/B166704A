@@ -1,0 +1,27 @@
+{
+    "id": "B166704A",
+    "path": "C:/Users/Ka Ri Sh Ma/Desktop/R Shiny/New Project/global.R",
+    "project_path": "global.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1689855022290.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "12,62",
+        "scrollLine": "0",
+        "disableDependencyDiscovery": "1"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1689946917,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1689946917306,
+    "read_only": false,
+    "read_only_alternatives": []
+}

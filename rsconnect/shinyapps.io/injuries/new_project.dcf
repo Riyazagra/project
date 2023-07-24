@@ -1,0 +1,13 @@
+name: new_project
+title:
+username:
+account: injuries
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9456141
+bundleId: 7456520
+url: https://injuries.shinyapps.io/new_project/
+when: 1689338248.40082
+lastSyncTime: 1689338248.40084
+asMultiple: FALSE
+asStatic: FALSE

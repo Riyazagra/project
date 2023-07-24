@@ -1,0 +1,46 @@
+source("global.R")
+
+ui =dashboardPage(skin=c("green"),
+                  
+dashboardHeader(title = "Accident analysis"),
+  
+source("ui/dashboard_sidebar_1.R",local=TRUE)$value,
+
+source("ui/dashboard_body_1.R",local=TRUE)$value
+    )
+
+server =function(input, output, session){
+
+source("utils/action_button_event_reactive.R",local = TRUE)$value
+
+source("utils/numeric_afterclick_actionbutton.R",local = TRUE)$value
+
+#source("utils/action_button_event_reactive_2.R",local = TRUE)$value
+  
+#source("server/Render_tables.R",local = TRUE)$value
+  
+source("server/testtables.R",local = TRUE)$value
+
+source("server/Download_button.R", local = TRUE)$value
+  
+source("utils/report1.R",local=TRUE)$value
+
+#source("server/Render_tables_2.R",local = TRUE)$value
+ 
+source("utils/reactive_ploting.R",local = TRUE)$value
+
+source("server/Render_ggplot.R",local = TRUE)$value
+  
+source("utils/report2.R",local = TRUE)$value
+
+#source("server/Render_plotly.R",local = TRUE)$value
+
+source("utils/exporttoppt.R",local = TRUE)$value
+  
+source("utils/batchjobs.R",local = TRUE)$value
+
+source("utils/batch_table_output.R",local = TRUE)$value
+  
+}
+
+shinyApp(ui, server)

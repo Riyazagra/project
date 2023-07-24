@@ -1,0 +1,13 @@
+#library(shiny)
+library(shinydashboard)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(data.table)
+library(officer)
+library(rvg)
+
+injuries=vroom::vroom("utils\\injuries.tsv.gz")
+population=vroom::vroom("utils\\population.tsv")
+products=vroom::vroom("utils\\products.tsv")
+prod_codes=purrr::set_names(products$prod_code,products$title)
